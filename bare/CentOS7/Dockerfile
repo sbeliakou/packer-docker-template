@@ -11,7 +11,7 @@ LABEL architecture="amd64" \
       OS="CentOS" \
       RELEASE="7.2.1511" \
       License=GPLv2 \
-      maintainer=Siarhei\ Beliakou\ (sbeliakou@gmail.com)
+      maintainer="Siarhei Beliakou (sbeliakou@gmail.com)"
 
 # Default command 
 CMD ["/bin/bash"]
