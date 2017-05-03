@@ -48,4 +48,6 @@ rm -rf $tmpdir/usr/share/i18n
 rm -rf $tmpdir/sbin/sln
 rm -rf $tmpdir/etc/ld.so.cache
 rm -rf $tmpdir/var/cache/ldconfig/*
-tar --numeric-owner -cf - -C $tmpdir . | xz > centos70.tar.xz
+tar --numeric-owner -cf - -C $tmpdir . | xz > ${1:-/$(pwd)}/centos7.tar.xz
+
+ls -l ${1:-/$(pwd)}/centos7.tar.xz

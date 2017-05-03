@@ -9,7 +9,7 @@ RUN   yum install -y epel-release && \
 
 LABEL architecture="amd64" \
       OS="CentOS" \
-      RELEASE="7.2.1511" \
+      RELEASE="7.3.1611" \
       License=GPLv2 \
       maintainer="Siarhei Beliakou (sbeliakou@gmail.com)"
 
