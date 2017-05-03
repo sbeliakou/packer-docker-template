@@ -1,7 +1,9 @@
 .PHONY: all build
 
 all:
-	@echo Usage: make build tag=sbeliakou/centos:7.3.1611
+	@echo Usage: make build
 
 build:
-	vagrant up; vagrant destroy -f; docker build -t $(tag) .
+	docker run --rm -v $(shell pwd):$(shell pwd) -w $(shell pwd) sbeliakou/centos:7.2 sh $(shell pwd)/bake.sh
+	docker build --label RELEASE=$(shell cat .release) -t sbeliakou/centos:$(shell cat .release) .
+	rm -f .release centos7.tar.gz
